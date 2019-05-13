@@ -6,7 +6,10 @@ public class BinarySearcher {
         int lowestIndex = 0;
         for (int i = 0; i < searchNumberIn.length; i++) {
             int middileIndex = (highestIndex + lowestIndex) / 2;
-
+            if (searchNumberIn[middileIndex] == toBeSearched) {
+                System.out.println("The number is present in the list at the index " + middileIndex);
+                return;
+            }
         }
     }
 }
