@@ -5,7 +5,7 @@ public class BinarySearcher {
         int highestIndex = searchNumberIn.length;
         int lowestIndex = 0;
         for (int i = 0; i < searchNumberIn.length; i++) {
-            int middileIndex = (highestIndex+lowestIndex)/2;
+            int middileIndex = getMiddileIndex(highestIndex, lowestIndex);
             if(searchNumberIn[middileIndex] == toBeSearched){
                System.out.println("The number is present in the list at the index " + middileIndex);
                return;
@@ -19,5 +19,9 @@ public class BinarySearcher {
 
         }
         System.out.println("Number not in the list");
+    }
+
+    private static int getMiddileIndex(int highestIndex, int lowestIndex) {
+        return (highestIndex+lowestIndex)/2;
     }
 }
