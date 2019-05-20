@@ -8,11 +8,11 @@ public class BinarySearcher {
         System.out.println(getNumberFinder(toBeSearched, searchNumberIn, highestIndex, lowestIndex));
     }
 
-    public static String getNumberFinder(int toBeSearched, int[] searchNumberIn, int highestIndex, int lowestIndex) {
+    public static int getNumberFinder(int toBeSearched, int[] searchNumberIn, int highestIndex, int lowestIndex) {
         if(lowestIndex < searchNumberIn.length-1) {
             int middileIndex = getMiddileIndex(highestIndex, lowestIndex);
             if (searchNumberIn[middileIndex] == toBeSearched) {
-                return ("The number is present in the list at the index " + middileIndex);
+                return ( middileIndex);
             } else if (searchNumberIn[middileIndex] > toBeSearched) {
                 return getNumberFinder(toBeSearched, searchNumberIn, middileIndex, lowestIndex);
             } else if (searchNumberIn[middileIndex] < toBeSearched) {
@@ -20,7 +20,7 @@ public class BinarySearcher {
             }
         }
 
-        return ("Number not in the list");
+        return (-1);
     }
 
     private static int getMiddileIndex(int highestIndex, int lowestIndex) {
