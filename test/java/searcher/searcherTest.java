@@ -9,12 +9,12 @@ public class searcherTest {
         assertEquals(5, BinarySearcher.getNumberFinder(6, toBeSearchedIn, 11, 0));
     }
     @Test
-    public void theIndexOfTheNumberToBeShownShouldBeGiven() {
+    public void theIndexOfTheNumberToBeSearchedShouldBeGiven() {
         int[] toBeSearchedIn = {3,5,8,12,14,15,17,18,20};
         assertEquals(3, BinarySearcher.getNumberFinder(12, toBeSearchedIn, 9, 0));
     }
     @Test
-    public void ifTheNumberIsNotInTheArrayItShouldSayNotInTheArray() {
+    public void ifTheNumberIsNotInTheArray() {
         int[] t0BeSearchedIn = {3,5,8,12,14,15,17,18,20};
         assertEquals(-1, BinarySearcher.getNumberFinder(29, t0BeSearchedIn, 9, 0));
     }
