@@ -19,8 +19,14 @@ public class searcherTest {
         assertEquals(-1, BinarySearcher.indexFinder(29, t0BeSearchedIn, 9, 0));
     }
     @Test
-    public void ifTheNameIsNotInTheArray() {
+    public void ifTheNameIsInTheArray() {
         String[] t0BeSearchedIn = {"divya","gauri","kajal","priya","zoyaa"};
         assertEquals(4, BinarySearcher.indexFinder("zoyaa", t0BeSearchedIn, 5, 0));
+    }
+    @Test
+    public void ifTheNumberIsInTheArray() {
+
+        Double [] t0BeSearchedIn = {0.0,1.2,2.4,3.6,7.7,8.9};
+        assertEquals(1, BinarySearcher.indexFinder(1.2, t0BeSearchedIn, 6, 0));
     }
 }
